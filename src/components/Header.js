@@ -3,7 +3,7 @@ import React from "react";
 export function Header() {
     return (
         <header className="header">
-            <a href="#default" className="logo">React</a>
+            <a href="#default" className="logo">MP</a>
             <div className="header-menu">     
                 <a className="active" href="#page1">Research</a>
                 <a href="#page2">Pros & Cons</a>

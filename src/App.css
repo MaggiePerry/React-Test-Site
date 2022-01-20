@@ -5,12 +5,12 @@
 :root {
 /* React Colour Theme */
 /* CSS HEX */
---black: #20232Aff;
---light-black: #282C35ff;
---dark-gray: #32363Fff;
---react-blue: #61DAFCff;
---light-gray: #9D9EA1ff;
---white: #FFFFFFff;
+--main: #fda9af;
+--secondary: #b8e1ff;
+--tertiary: #85dbc6;
+--highlight: #fca1a1;
+--main-light: rgb(255, 210, 210);
+--white: #ffff;
 }
 
 
@@ -22,6 +22,12 @@
   display: grid;
 }
 
+.bar {
+  background-color: var(--tertiary);
+  padding: 20px;
+  margin: 0;
+}
+
 
 /* ==========================================================================
    Header
@@ -30,7 +36,7 @@
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color: var(--black);
+  background-color: var(--main);
   color: var(--white);
   padding: 20px 10px;
 }
@@ -50,18 +56,18 @@
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
   font-weight: bold;
-  color: var(--react-blue);
+  color: var(--white);
 }
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  background-color: var(--black);
-  color: var(--react-blue);
+  background-color: var(--main);
+  color: var(--white);
 }
 
 /* Style the active/current link*/
 .header a.active {
-  color: var(--react-blue);
+  color: var(--white);
   text-decoration: underline;
 }
 
@@ -87,11 +93,22 @@
   ========================================================================== */
 .article {
   min-height: 60vh;
+  display: grid;
+  grid-template-columns: .3fr 1fr .3fr;
+  justify-content: center;
+}
+
+.article-wrapper {
+  grid-column: 2;
+}
+
+.article__title {
+  background-color: var(--secondary);
+  grid-column: span -1;
 }
 
 .article h1 {
-  background-color: var(--light-black);
-  color: var(--react-blue);
+  color: var(--white);
   font-size: 45px;
   padding: 70px;
   margin: 0;
@@ -110,28 +127,24 @@
 }
 
 /* ==========================================================================
-   Table
+   Pros and Cons Table
    ========================================================================== */
 .table table {
   margin: 3rem auto;
   border-collapse: collapse;
-  border-bottom: 5px solid var(--react-blue);
-  box-shadow: 0px 0px 1px 0px var(--light-gray);
+  border-bottom: 5px solid var(--highlight);
+  box-shadow: 0px 0px 1px 0px var(--main-light);
 }
 
-/* .table td:hover {
-  background: var(--light-gray) 20%;
-  color: var(--white);
-} */
 .table th, td {
-  border: 1px solid var(--react-blue);
+  border: 3px solid var(--highlight);
   border-top: none;
   border-bottom: none;
   padding: 12px 35px;
   border-collapse: collapse;
 }
 .table th {
-  background: var(--react-blue);
+  background: var(--highlight);
   text-transform: uppercase;
   font-size: 12px;
 }
@@ -143,14 +156,8 @@
 
 .footer {
   overflow: hidden;
-  background-color: var(--black);
-  color: var(--light-gray);
-}
-
-.footer h3 {
-  background-color: var(--dark-gray);
-  padding: 20px;
-  margin: 0;
+  background-color: var(--main);
+  color: var(--main-light);
 }
 
 .footer-menu {
@@ -170,12 +177,12 @@
 
 /* Change the background color on mouse-over */
 .footer a:hover {
-  color: var(--react-blue);
+  color: var(--white);
 }
 
 /* Style the active/current link*/
 .footer a.active {
-  color: var(--react-blue);
+  color: var(--white);
   text-decoration: underline;
 }
 

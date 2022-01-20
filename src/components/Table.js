@@ -12,12 +12,12 @@ export function Table() {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>JSX</td>
-                        <td>Learning Curve</td>
+                        <td>This is a pros and cons table</td>
+                        <td>This can be useful for blof posts or reviews</td>
                     </tr>
                     <tr>
-                        <td>VirtualDOM</td>
-                        <td>Documentation</td>
+                        <td>This is a very simple example</td>
+                        <td>Will make more compled version in the future</td>
                     </tr>
                 </tbody>
             </table>
